@@ -1,12 +1,12 @@
 
 import React from 'react';
-import Header from './Components/Header';
+import NavBar from './Components/NavBar';
 import Footer from './Components/Footer';
 import CometLanding from './Components/whoweare';
 function App() {
   return (
     <div className="App">
-      <Header />
+      <NavBar />
       <CometLanding />
       <main>
         <p>This is the main content.</p>

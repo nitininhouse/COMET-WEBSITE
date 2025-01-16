@@ -1,6 +1,6 @@
 import React from "react";
-import IMAGE1 from "../images/IMAGE1.png";
-import IMAGE2 from "../images/IMAGE2.png"; // Import the image
+import IMAGE1 from "../assets/frames/IMAGE1.png";
+import IMAGE2 from "../assets/backgrounds/IMAGE2.png";
 
 export default function CometLanding() {
   return (
