@@ -62,7 +62,7 @@ const SpeakersGrid = () => {
               <img
                 src={speaker.image} // Static placeholder image
                 alt={speaker.name}
-                className="w-full h-full object-cover rounded-lg" // Ensure image fills container and keeps its aspect ratio
+                className="w-full h-full object-cover rounded-lg transform transition-all duration-500 hover:scale-105 hover:rotate-3d hover:shadow-xl" // Applying 3D effect on hover
               />
             </div>
           ))}
@@ -70,12 +70,12 @@ const SpeakersGrid = () => {
 
         {/* Mobile Single Slide View */}
         <div className="md:hidden relative flex justify-center items-center">
-          <div className="relative w-[454px] h-auto overflow-hidden"> {/* Set width to 454px for mobile */}
+          <div className="relative w-[454px] h-auto overflow-hidden">
             {/* Static Image for Mobile */}
             <img
               src={speakers[currentIndex].image} // Static placeholder image for mobile view
               alt={speakers[currentIndex].name}
-              className="w-full h-auto object-contain" // Ensure image fits within the container without cropping
+              className="w-full h-auto object-contain transform transition-all duration-500 hover:scale-105 hover:rotate-3d hover:shadow-xl" // Applying 3D effect on hover
             />
 
             {/* Arrow Buttons for Mobile */}
