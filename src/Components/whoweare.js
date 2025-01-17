@@ -166,7 +166,7 @@ export default function CometLanding() {
       </div>
 
       {/* Marquee Section */}
-      <div className="mt-14 mb-14">
+      <div className="mt-14 ">
         <div className="bg-[#DBDAEA] text-[#C10000] py-4 rounded-none w-full overflow-hidden">
           <div className="scrolling-wrapper">
             <span className="scrolling-text">
