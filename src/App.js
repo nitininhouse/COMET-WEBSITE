@@ -1,14 +1,14 @@
 
 import React from 'react';
-import NavBar from './Components/NavBar';
-import Footer from './Components/Footer';
-import CometLanding from './Components/whoweare';
 import SpeakersGrid from './Components/pastspeakers'
 import Partners from './Components/partners';
-function App() {
+import { NavBar, Footer, CometLanding, HeroSection } from './Components';
+
+function App(){
   return (
     <div className="App">
       <NavBar />
+      <HeroSection />
       <CometLanding />
       <Partners/>
       <SpeakersGrid/>
