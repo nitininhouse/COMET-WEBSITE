@@ -26,21 +26,21 @@ const NavBar = () => {
   ];
 
   return (
-    <header className="bg-black text-white font-DmSans">
+    <header className="bg-black text-white font-DmSans relative z-50">
       <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 pr-2">
             <IITRlogo className="h-16" />
             <CDCIITRlogo className="h-16" />
-            <div className="flex flex-col font-bold pl-2">
-              <span className="text-lg text-yellow-400">Career Development Cell</span>
+            <div className="flex flex-col font-bold">
+              <span className="text-lg text-yellow-400 flex-nowrap">Career Development Cell</span>
               <span className="text-lg text-yellow-400">IIT Roorkee</span>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className={`hidden lg:flex items-center space-x-16`}>
+          <div className={`hidden lg:flex items-center space-x-8`}>
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -58,7 +58,7 @@ const NavBar = () => {
             </a>
           </div>
 
-          {/* Mobile Menu Button - Custom HTML/CSS hamburger */}
+          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(true)}
             className="lg:hidden w-8 h-8 flex flex-col justify-center items-center text-yellow-400 focus:outline-none"
@@ -73,19 +73,18 @@ const NavBar = () => {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity lg:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity lg:hidden z-50 ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
         onClick={() => setIsMenuOpen(false)}
       />
 
       {/* Mobile Menu Panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-black transform transition-transform duration-300 ease-in-out lg:hidden ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed top-0 right-0 h-full w-72 bg-black transform transition-transform duration-300 ease-in-out lg:hidden z-50 ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
         <div className="flex flex-col h-full">
           <div className="flex justify-end p-4">
-            {/* Custom close button */}
             <button
               onClick={() => setIsMenuOpen(false)}
               className="text-yellow-400 w-8 h-8 relative focus:outline-none"

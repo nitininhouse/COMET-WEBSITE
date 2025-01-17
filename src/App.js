@@ -1,12 +1,13 @@
 
 import React from 'react';
-import NavBar from './Components/NavBar';
-import Footer from './Components/Footer';
-import CometLanding from './Components/whoweare';
+import { NavBar, Footer, CometLanding, HeroSection } from './Components';
+
+
 function App() {
   return (
     <div className="App">
       <NavBar />
+      <HeroSection />
       <CometLanding />
       <main>
         <p>This is the main content.</p>
