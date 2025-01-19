@@ -26,14 +26,17 @@ const NavBar = () => {
   ];
 
   return (
-    <header className="bg-black text-white font-DmSans relative z-50">
+    <div
+      className={`fixed w-full z-50 ${isMobileView ? 'bg-black' : 'md:bg-opacity-60 bg-black backdrop-blur-sm'
+        } text-white font-DmSans`}
+    >
       <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <div className="flex items-center space-x-2 pr-2">
             <IITRlogo className="h-16" />
             <CDCIITRlogo className="h-16" />
-            <div className="flex flex-col font-bold">
+            <div className="hidden sm:flex flex-col font-bold">
               <span className="text-lg text-yellow-400 flex-nowrap">Career Development Cell</span>
               <span className="text-lg text-yellow-400">IIT Roorkee</span>
             </div>
@@ -115,7 +118,7 @@ const NavBar = () => {
           </div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
