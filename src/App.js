@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { NavBar, Footer, CometLanding, HeroSection } from './Components';
+import { NavBar, Footer, CometLanding, HeroSection, PastSpeakers } from './Components';
 import BackgroundImage from "./assets/backgrounds/Background.png";
 
 function App() {
@@ -25,14 +25,14 @@ function App() {
         </div>
         <div className="relative z-10">
           <CometLanding />
-          {/* main content here */}
+          <PastSpeakers />
         </div>
-      </main>
+      </main >
 
       <footer>
         <Footer />
       </footer>
-    </div>
+    </div >
   );
 }
 

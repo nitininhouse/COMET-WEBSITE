@@ -27,7 +27,7 @@ const NavBar = () => {
 
   return (
     <div
-      className={`fixed w-full z-50 ${isMobileView ? 'bg-black' : 'md:bg-opacity-60 bg-black backdrop-blur-sm'
+      className={`fixed w-full z-50 ${isMobileView ? 'bg-black' : 'md:bg-opacity-60 bg-black backdrop-blur-md'
         } text-white font-DmSans`}
     >
       <nav className="container mx-auto px-4 py-2">
