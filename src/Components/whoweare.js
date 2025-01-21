@@ -1,6 +1,7 @@
 import React from "react";
 import IMAGE1 from "../assets/frames/IMAGE1.png";
 import IMAGE2 from "../assets/backgrounds/IMAGE2.png";
+import VIDEO from "../assets/speakers/video.mp4";
 
 export default function CometLanding() {
   return (
@@ -14,7 +15,6 @@ export default function CometLanding() {
       }}
     >
       <div className="container mx-auto space-y-12 mb-12">
-        {/* Heading */}
         <h1
           style={{ fontFamily: "Aquire" }}
           className="text-3xl sm:text-5xl md:text-5xl lg:text-6xl text-center text-[#FFA500] tracking-wider"
@@ -62,7 +62,6 @@ export default function CometLanding() {
             </p>
           </div>
 
-          {/* THINK BEYOND, LEAD BEYOND Section */}
           <div>
             <h2
               style={{ fontFamily: "Aquire" }}
@@ -93,18 +92,26 @@ export default function CometLanding() {
           </div>
         </div>
 
-        {/* Right Image and Stats Section */}
         <div className="flex flex-col items-center space-y-7 mr-14">
-          {/* Image */}
-          <div className="w-full max-w-[650px] mx-auto mb-0">
-            <img
-              src={IMAGE1}
-              alt="COMET'25 Event"
-              className="object-cover w-full h-auto rounded-lg"
-            />
-          </div>
+        <div className="relative w-full max-w-[650px] mx-auto mb-0">
+  {/* Video as the background */}
+  <video
+    src={VIDEO}
+    autoPlay
+    loop
+    muted
+    className="absolute top-0 left-0 w-full h-full object-cover rounded-lg z-0"
+  />
 
-          {/* Stats Section */}
+  {/* Frame overlaying the video */}
+  <img
+    src={IMAGE1}
+    alt="COMET'25 Event"
+    className="relative w-full h-auto rounded-lg z-10"
+  />
+</div>
+
+
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center w-full">
             <div className="border-2 border-[#DDC3D0] bg-[#DDC3D0] p-4 rounded-lg flex flex-col justify-center items-center">
               <p
@@ -165,7 +172,6 @@ export default function CometLanding() {
         </div>
       </div>
 
-      {/* Marquee Section */}
       <div className="mt-14 ">
         <div className="bg-[#DBDAEA] text-[#C10000] py-4 rounded-none w-full overflow-hidden">
           <div className="scrolling-wrapper">

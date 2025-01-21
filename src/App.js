@@ -1,8 +1,9 @@
 
 import React from 'react';
-import SpeakersGrid from './Components/pastspeakers'
+
 import Partners from './Components/partners';
 import { NavBar, Footer, CometLanding, HeroSection } from './Components';
+import CompactTeamGrid from './Components/teammembers';
 
 function App(){
   return (
@@ -11,7 +12,8 @@ function App(){
       <HeroSection />
       <CometLanding />
       <Partners/>
-      <SpeakersGrid/>
+      
+      <CompactTeamGrid/>
      
       <Footer />
     </div>
