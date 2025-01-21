@@ -7,12 +7,6 @@ export default function CometLanding() {
   return (
     <section
       className="min-h-screen pt-8 text-white font-DM Sans"
-      style={{
-        backgroundImage: `url(${IMAGE2})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
       <div className="container mx-auto space-y-12 mb-12">
         <h1
