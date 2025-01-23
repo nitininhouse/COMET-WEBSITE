@@ -1,6 +1,5 @@
 import React from "react";
 import IMAGE1 from "../assets/frames/IMAGE1.png";
-import IMAGE2 from "../assets/backgrounds/IMAGE2.png";
 import VIDEO from "../assets/speakers/video.mp4";
 
 export default function CometLanding() {
@@ -17,11 +16,10 @@ export default function CometLanding() {
         </h1>
       </div>
 
-      {/* Main Content */}
       <div className="grid lg:grid-cols-2 gap-8 ml-12">
-        {/* Left Content */}
+       
         <div className="space-y-10 pr-7">
-          {/* COMET'25 Section */}
+        
           <div>
             <h2
               style={{ fontFamily: "Aquire" }}

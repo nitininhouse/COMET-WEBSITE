@@ -22,13 +22,13 @@ const SpeakerCard = ({ name, designation, image }) => {
 
             {/* Text Overlays */}
             <div className="absolute top-0 left-0 right-0 h-[22px] flex items-center justify-center z-20">
-                <span className="text-white font-Aquire font-bold text-base tracking-wider">
+                <span className="text-white font-Aquire font-bold text-sm tracking-wider">
                     {name}
                 </span>
             </div>
 
             <div className="absolute bottom-0 left-0 right-0 h-[26px] flex items-center justify-center z-20">
-                <span className="text-white font-Aquire font-bold text-base tracking-wider">
+                <span className="text-white font-Aquire font-bold text-sm tracking-wider">
                     {designation}
                 </span>
             </div>

@@ -1,8 +1,6 @@
 
 import React from 'react';
-import Partners from './Components/partners';
-import CompactTeamGrid from './Components/teammembers';
-import { NavBar, Footer, CometLanding, HeroSection, PastSpeakers } from './Components';
+import { NavBar, Footer, CometLanding, HeroSection, PastSpeakers, Partners, TeamGrid } from './Components';
 import BackgroundImage from "./assets/backgrounds/Background.png";
 
 function App() {
@@ -29,7 +27,8 @@ function App() {
           <CometLanding />
           <PastSpeakers />
           <Partners />
-          <CompactTeamGrid />
+          <TeamGrid />
+
         </div>
       </main >
 

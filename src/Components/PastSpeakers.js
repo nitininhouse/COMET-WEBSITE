@@ -5,11 +5,11 @@ import AnirudhArun from "../assets/speakers/AnirudhArun.png";
 import TanuJain from "../assets/speakers/TanuJain.png";
 import IqlipseNova from "../assets/speakers/IqlipseNova.png";
 import PratishMehta from "../assets/speakers/PratishMehta.png";
-import Speaker1 from "../assets/speakers/Speaker1.png";
-import Speaker2 from "../assets/speakers/Speaker2.png";
-import Speaker3 from "../assets/speakers/Speaker3.png";
-import Speaker4 from "../assets/speakers/Speaker4.png";
-import Speaker5 from "../assets/speakers/Speaker5.png";
+import AbhishekSyal from "../assets/speakers/AbhishekSyal.png";
+import AnkitShukla from "../assets/speakers/AnkitShukla.png";
+import HimanshuShekhar from "../assets/speakers/HimanshuShekhar.png";
+import TarunMalhotra from "../assets/speakers/TarunMalhotra.png";
+import ManojAgarwal from "../assets/speakers/ManojAgarwal.png";
 
 const PastSpeakers = () => {
     const PAD_X = 10; // X-axis gap in percentage
@@ -18,12 +18,12 @@ const PastSpeakers = () => {
     const speakers = [
         {
             name: "Anirudh Arun",
-            designation: "Co-founder-BLU smart",
+            designation: "Co-founder-BluSmart",
             image: AnirudhArun
         },
         {
             name: "DR TANU JAIN",
-            designation: "Ex-IAS",
+            designation: "Ex-Bureaucrat",
             image: TanuJain
         },
         {
@@ -33,33 +33,33 @@ const PastSpeakers = () => {
         },
         {
             name: "Pratish Mehta",
-            designation: "Ex-IAS",
+            designation: "Director - KF 3",
             image: PratishMehta
         },
         {
-            name: "DR TANU JAIN",
-            designation: "Ex-IAS",
-            image: Speaker1
+            name: "Manoj Agarwal",
+            designation: "Co-founder, Seafund",
+            image: ManojAgarwal
         },
         {
-            name: "DR TANU JAIN",
-            designation: "Ex-IAS",
-            image: Speaker2
+            name: "Himanshu Shekhar",
+            designation: "Senior Editor, NDTV",
+            image: HimanshuShekhar
         },
         {
-            name: "DR TANU JAIN",
-            designation: "Ex-IAS",
-            image: Speaker3
+            name: "Abhishek Syal",
+            designation: "Senior Advisor, Dell",
+            image: AbhishekSyal
         },
         {
-            name: "DR TANU JAIN",
-            designation: "Ex-IAS",
-            image: Speaker4
+            name: "Ankit Shukla",
+            designation: "Founder, HelloPM",
+            image: AnkitShukla
         },
         {
-            name: "DR TANU JAIN",
-            designation: "Ex-IAS",
-            image: Speaker5
+            name: "Tarun Malhotra",
+            designation: "Vice President, Pay10",
+            image: TarunMalhotra
         }
     ];
 
