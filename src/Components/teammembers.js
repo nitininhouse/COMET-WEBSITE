@@ -9,14 +9,42 @@ const teamMembers = [
   { id: 6, name: "Renu", position: "Head of Marketing", img: require("../assets/team/6.jpeg") },
   { id: 7, name: "Smrutisriya Bisoyi", position: "Head of Sponsorship", img: require("../assets/team/7.jpeg") },
   { id: 8, name: "Mansi Bansal", position: "Head of Outreach", img: require("../assets/team/8.jpeg") },
-  { id: 9, name: "Dr. Rajat Rastogi", position: "Professor-In-Charge", img: require("../assets/team/9.jpg") },
+  { id: 9, name: "Aarsh Choudhary", position: "General Secretary", img: require("../assets/team/11.png") },
   { id: 10, name: "Dayal Dewasi ", position: "Office Superintendent", img: require("../assets/team/10.jpg") },
-  { id: 11, name: "Aarsh Choudhary", position: "General Secretary", img: require("../assets/team/11.png") },
+  { id: 11, name: "Dr. Rajat Rastogi", position: "Professor-In-Charge", img: require("../assets/team/9.jpg") },
+  { id: 12, name: "Gaurav ", position: "Head of Promotions", img: require("../assets/team/IMG_0327.png") },
 ];
+
+const TeamMemberCard = ({ member }) => {
+  return (
+    <div className="relative w-48 sm:w-60 h-72 sm:h-80 overflow-hidden bg-white p-4 shadow-md group">
+      <div className="h-40 sm:h-48 overflow-hidden relative">
+        <img
+          src={member.img}
+          alt={member.name}
+          className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
+        />
+        <div className="absolute inset-0 bg-yellow-500 bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+      </div>
+      <div className="pt-3 relative">
+        <div className="flex justify-between items-center">
+          <div className="flex flex-col">
+            <h3 className="text-base sm:text-lg font-bold text-[#C10000] group-hover:text-xl transition-all duration-300">
+              {member.name}
+            </h3>
+            <p className="text-xs sm:text-sm font-bold text-[#E89005] group-hover:text-base transition-all duration-300">
+              {member.position}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const TeamGrid = () => {
   return (
-    <div className="min-h-screen px-8 py-12">
+    <div className="min-h-screen px-4 sm:px-8 py-12">
       <div className="container mx-auto">
         <h1
           style={{ fontFamily: "Aquire" }}
@@ -25,105 +53,36 @@ const TeamGrid = () => {
           ORGANISING TEAM
         </h1>
 
-        {/* Grid Container */}
         <div className="grid gap-6">
           {/* First Row - Single Larger Member (Team Lead) */}
-          <div className="flex justify-center mb-20">
-            <div className="w-64 h-80 overflow-hidden bg-white p-4 shadow-md">
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={teamMembers[0].img}
-                  alt={teamMembers[0].name}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="pt-3 text-center">
-                <h3 className="text-lg font-bold text-[#C10000]">{teamMembers[0].name}</h3>
-                <p className="text-sm font-bold text-[#E89005]">{teamMembers[0].position}</p>
-              </div>
-            </div>
+          <div className="flex justify-center mb-8 sm:mb-20">
+            <TeamMemberCard member={teamMembers[0]} />
           </div>
 
           {/* Second Row - 3 Smaller Members */}
-          <div className="flex flex-wrap justify-around px-12">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 px-4 sm:px-12">
             {teamMembers.slice(1, 4).map((member) => (
-              <div
-                key={member.id}
-                className="w-60 h-80 overflow-hidden bg-white p-4 shadow-md"
-              >
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="pt-3 text-center">
-                  <h3 className="text-lg font-bold text-[#C10000]">{member.name}</h3>
-                  <p className="text-sm font-bold text-[#E89005]">{member.position}</p>
-                </div>
-              </div>
+              <TeamMemberCard key={member.id} member={member} />
             ))}
           </div>
 
           {/* Third Row - 3 Smaller Members */}
-          <div className="flex flex-wrap justify-around px-12">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 px-4 sm:px-12 mt-4 sm:mt-8">
             {teamMembers.slice(4, 7).map((member) => (
-              <div
-                key={member.id}
-                className="w-60 h-80 overflow-hidden bg-white p-4 shadow-md"
-              >
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="pt-3 text-center">
-                  <h3 className="text-lg font-bold text-[#C10000]">{member.name}</h3>
-                  <p className="text-sm font-bold text-[#E89005]">{member.position}</p>
-                </div>
-              </div>
+              <TeamMemberCard key={member.id} member={member} />
             ))}
           </div>
 
-          {/* Fourth Row - Single Centered Member */}
-          <div className="flex justify-center px-12">
-            <div className="w-60 h-80 overflow-hidden bg-white p-4 shadow-md">
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={teamMembers[7].img}
-                  alt={teamMembers[7].name}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="pt-3 text-center">
-                <h3 className="text-lg font-bold text-[#C10000]">{teamMembers[7].name}</h3>
-                <p className="text-sm font-bold text-[#E89005]">{teamMembers[7].position}</p>
-              </div>
-            </div>
+          {/* Fourth Row - 2 Smaller Members */}
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 px-4 sm:px-12 mt-4 sm:mt-8">
+            <TeamMemberCard member={teamMembers[7]} />
+            <TeamMemberCard member={teamMembers[11]} />
           </div>
 
           {/* Fifth Row - 3 Smaller Members */}
-          <div className="flex flex-wrap justify-around px-12">
-            {teamMembers.slice(8).map((member) => (
-              <div
-                key={member.id}
-                className="w-60 h-80 overflow-hidden bg-white p-4 shadow-md"
-              >
-                <div className="h-48 overflow-hidden">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="h-full w-full object-cover"
-                  />
-                </div>
-                <div className="pt-3 text-center">
-                  <h3 className="text-lg font-bold text-[#C10000]">{member.name}</h3>
-                  <p className="text-sm font-bold text-[#E89005]">{member.position}</p>
-                </div>
-              </div>
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 px-4 sm:px-12 mt-4 sm:mt-8">
+            {teamMembers.slice(8, 11).map((member) => (
+              <TeamMemberCard key={member.id} member={member} />
             ))}
           </div>
         </div>

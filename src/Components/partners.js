@@ -1,11 +1,12 @@
 import React from "react";
 
+// Dynamically load all images in the partners folder
+const importAll = (r) => r.keys().map(r);
+const logos = importAll(require.context("../assets/partners", false, /\.png$/));
+
 const Partners = () => {
-  // Generate array of logo paths dynamically based on sequential naming
-  const logoCount = 20; // Update this to match the total number of logos
-  const logos = Array.from({ length: logoCount }, (_, index) => 
-    require(`../assets/partners/${index + 1}.png`)
-  );
+  // Duplicate logos to create seamless infinite scroll
+  const duplicatedLogos = [...logos, ...logos];
 
   return (
     <div className="relative bg-cover text-center py-12">
@@ -16,15 +17,11 @@ const Partners = () => {
         OUR PARTNERS
       </h2>
       <div className="overflow-hidden">
-        <div
-          className="flex space-x-4 animate-scroll"
-          style={{ animation: "scroll 10s linear infinite" }}
-        >
-          {/* Render logos */}
-          {logos.concat(logos).map((logo, index) => (
+        <div className="animate-scroll flex space-x-4">
+          {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="min-w-[200px] h-[100px] flex items-center justify-center bg-white rounded-lg shadow-lg"
+              className="min-w-[200px] h-[100px] flex items-center justify-center bg-white rounded-lg shadow-lg p-4"
             >
               <img
                 src={logo}
@@ -37,12 +34,6 @@ const Partners = () => {
       </div>
 
       <style jsx>{`
-        .animate-scroll {
-          display: flex;
-          width: calc(200px * ${logos.length * 2} + 4px * ${logos.length * 2});
-          animation: scroll 10s linear infinite;
-        }
-
         @keyframes scroll {
           0% {
             transform: translateX(0);
@@ -50,6 +41,12 @@ const Partners = () => {
           100% {
             transform: translateX(-50%);
           }
+        }
+
+        .animate-scroll {
+          display: flex;
+          width: calc(200px * ${duplicatedLogos.length} + 16px * ${duplicatedLogos.length});
+          animation: scroll 14s linear infinite;
         }
       `}</style>
     </div>

@@ -1,17 +1,16 @@
-
 import React from 'react';
-import { NavBar, Footer, CometLanding, HeroSection, PastSpeakers, Partners, TeamGrid } from './Components';
+import { NavBar,  CometLanding, HeroSection, PastSpeakers, Partners, TeamGrid } from './Components';
 import BackgroundImage from "./assets/backgrounds/Background.png";
-
+ 
 function App() {
   return (
     <div className="App min-h-screen flex flex-col">
       <header>
         <NavBar />
-        <HeroSection />
       </header>
 
       <main className="flex-grow relative">
+        {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
           <div
             className="w-full h-full"
@@ -23,19 +22,28 @@ function App() {
             }}
           />
         </div>
+        {/* Content Sections */}
         <div className="relative z-10">
-          <CometLanding />
-          <PastSpeakers />
-          <Partners />
-          <TeamGrid />
-
+          <section id="Home">
+            <HeroSection />
+          </section>
+          <section id="WhoWeAre">
+            <CometLanding />
+          </section>
+          <section id="PastSpeakers">
+            <PastSpeakers />
+          </section>
+          <section id="OurPartners">
+            <Partners />
+          </section>
+          <section id="OurTeam">
+            <TeamGrid />
+          </section>
         </div>
-      </main >
+      </main>
 
-      <footer>
-        <Footer />
-      </footer>
-    </div >
+      
+    </div>
   );
 }
 
