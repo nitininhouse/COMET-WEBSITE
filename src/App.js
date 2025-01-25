@@ -1,7 +1,7 @@
 import React from 'react';
-import { NavBar,  CometLanding, HeroSection, PastSpeakers, Partners, TeamGrid } from './Components';
+import { NavBar, CometLanding, HeroSection, PastSpeakers, Partners, TeamGrid } from './Components';
 import BackgroundImage from "./assets/backgrounds/Background.png";
- 
+
 function App() {
   return (
     <div className="App min-h-screen flex flex-col">
@@ -42,7 +42,7 @@ function App() {
         </div>
       </main>
 
-      
+
     </div>
   );
 }

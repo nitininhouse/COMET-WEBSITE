@@ -1,38 +1,39 @@
 import React from 'react';
 import SpeakerFrame from '../../assets/frames/SpeakerFrame.svg';
 
-const SpeakerCard = ({ name, designation, image }) => {
+const SpeakerCard = ({ name, designation, image, className }) => {
     return (
         <div
-            className="relative w-[256px] h-auto hover:scale-105 transition-transform duration-300 ease-in-out"
+            className={`relative w-[256px] h-auto hover:scale-105 transition-transform duration-300 ease-in-out ${className}`}
         >
             {/* Frame SVG */}
-            <img src={SpeakerFrame} alt="frame" className="w-full relative z-10" />
+            < img src={SpeakerFrame} alt="frame" className="w-full relative z-10" />
 
             {/* Image Container */}
-            <div className="absolute top-[2px] left-[2px] right-[2px] bottom-[2px] z-0 overflow-hidden bg-[#DBDAEA]">
+            < div className="absolute top-[2px] left-[2px] right-[2px] bottom-[2px] z-0 overflow-hidden bg-[#DBDAEA]" >
                 {image && (
                     <img
                         src={image}
                         alt={name}
                         className="absolute bottom-0 left-0 right-0"
                     />
-                )}
-            </div>
+                )
+                }
+            </div >
 
             {/* Text Overlays */}
-            <div className="absolute top-0 left-0 right-0 h-[22px] flex items-center justify-center z-20">
+            < div className="absolute top-0 left-0 right-0 h-[22px] flex items-center justify-center z-20" >
                 <span className="text-white font-Aquire font-bold text-sm tracking-wider">
                     {name}
                 </span>
-            </div>
+            </div >
 
             <div className="absolute bottom-0 left-0 right-0 h-[26px] flex items-center justify-center z-20">
                 <span className="text-white font-Aquire font-bold text-sm tracking-wider">
                     {designation}
                 </span>
             </div>
-        </div>
+        </div >
     );
 };
 

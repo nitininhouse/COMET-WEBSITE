@@ -17,9 +17,9 @@ export default function CometLanding() {
       </div>
 
       <div className="grid lg:grid-cols-2 gap-8 ml-12">
-       
+
         <div className="space-y-10 pr-7">
-        
+
           <div>
             <h2
               style={{ fontFamily: "Aquire" }}
@@ -85,23 +85,23 @@ export default function CometLanding() {
         </div>
 
         <div className="flex flex-col items-center space-y-7 mr-14">
-        <div className="relative w-full max-w-[650px] mx-auto mb-0">
-  {/* Video as the background */}
-  <video
-    src={VIDEO}
-    autoPlay
-    loop
-    muted
-    className="absolute top-0 left-0 w-full h-full object-cover rounded-lg z-0"
-  />
+          <div className="relative w-full max-w-[650px] mx-auto mb-0">
+            {/* Video as the background */}
+            <video
+              src={VIDEO}
+              autoPlay
+              loop
+              muted
+              className="absolute top-0 left-0 w-full h-full object-cover rounded-lg z-0 clip-video"
+            />
 
-  {/* Frame overlaying the video */}
-  <img
-    src={IMAGE1}
-    alt="COMET'25 Event"
-    className="relative w-full h-auto rounded-lg z-10"
-  />
-</div>
+            {/* Frame overlaying the video */}
+            <img
+              src={IMAGE1}
+              alt="COMET'25 Event"
+              className="relative w-full h-auto rounded-lg z-10"
+            />
+          </div>
 
 
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center w-full">

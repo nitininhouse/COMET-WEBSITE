@@ -73,22 +73,27 @@ const PastSpeakers = () => {
 
             {/* Responsive Grid with dynamic gaps */}
             <div
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center max-w-[1400px] mx-auto"
+                className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 justify-items-center max-w-[1400px] mx-auto"
                 style={{
                     gap: `${GAP_Y}px`,
                     padding: `${GAP_Y}px ${PAD_X}%`
                 }}
             >
-                {speakers.map((speaker, index) => (
-                    <SpeakerCard
-                        key={index}
-                        name={speaker.name}
-                        designation={speaker.designation}
-                        image={speaker.image}
-                        width="100%"
-                        height="auto"
-                    />
-                ))}
+                {speakers.map((speaker, index) => {
+                    const isLast = index === speakers.length - 1;
+
+                    return (
+                        <SpeakerCard
+                            key={index}
+                            name={speaker.name}
+                            designation={speaker.designation}
+                            image={speaker.image}
+                            width="100%"
+                            height="auto"
+                            className={`${isLast ? 'col-span-2 sm:col-start-2 sm:col-span-2 lg:col-span-2 lg:col-start-auto' : 'col-span-2'}`}
+                        />
+                    );
+                })}
             </div>
         </section>
     );
