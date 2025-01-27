@@ -3,7 +3,7 @@ import React from "react";
 const teamMembers = [
   { id: 1, name: "Ankit Lal", position: "Convener", img: require("../assets/team/1.jpeg") },
   { id: 2, name: "Chaitanya Gupta ", position: "Co-Convener", img: require("../assets/team/2.jpg") },
-  { id: 3, name: "Ashwani Shankar", position: "Co-Convener", img: require("../assets/team/3.JPG") },
+  { id: 3, name: "Ashwani Shankar", position: "Co-Convener", img: require("../assets/team/3.jpg") },
   { id: 4, name: "Shaswat Pandey", position: "Co-Convener", img: require("../assets/team/4.jpeg") },
   { id: 5, name: "Sarthak Warade", position: "Events Head", img: require("../assets/team/5.JPG") },
   { id: 6, name: "Renu", position: "Head of Marketing", img: require("../assets/team/6.jpeg") },
@@ -15,7 +15,7 @@ const teamMembers = [
   { id: 12, name: "Gaurav ", position: "Head of Promotions", img: require("../assets/team/IMG_0327.png") },
 ];
 
-const TeamMemberCard = ({ member }) => {
+const TeamMemberCard = ({ member, showClub = false }) => {
   return (
     <div className="relative w-48 sm:w-60 h-72 sm:h-80 overflow-hidden bg-white p-4 shadow-md group">
       <div className="h-40 sm:h-48 overflow-hidden relative">
@@ -32,12 +32,14 @@ const TeamMemberCard = ({ member }) => {
             <h3 className="text-sm sm:text-base font-bold text-[#C10000] group-hover:text-lg transition-all duration-300">
               {member.name}
             </h3>
-            <p className="text-xs sm:text-sm font-bold text-[#E89005] group-hover:text-base transition-all duration-300">
+            <p className="text-xs sm:text-sm font-bold text-[#E89005] group-hover:text-sm transition-all duration-300">
               {member.position}
             </p>
-            <p className="text-sm sm:text-base font-bold text-[#E89005] group-hover:text-lg transition-all duration-300">
-              CDC
-            </p>
+            {showClub && (
+              <p className="text-xs sm:text-sm font-bold text-[#E89005] group-hover:text-xs transition-all duration-300">
+                Carrier Development Cell
+              </p>
+            )}
           </div>
         </div>
       </div>
@@ -85,7 +87,7 @@ const TeamGrid = () => {
           {/* Fifth Row - 3 Smaller Members */}
           <div className="flex flex-wrap justify-center gap-4 sm:gap-6 px-4 sm:px-12 mt-4 sm:mt-8">
             {teamMembers.slice(8, 11).map((member) => (
-              <TeamMemberCard key={member.id} member={member} />
+              <TeamMemberCard key={member.id} member={member} showClub={true} />
             ))}
           </div>
         </div>
