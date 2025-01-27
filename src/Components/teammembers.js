@@ -3,7 +3,7 @@ import React from "react";
 const teamMembers = [
   { id: 1, name: "Ankit Lal", position: "Convener", img: require("../assets/team/1.jpeg") },
   { id: 2, name: "Chaitanya Gupta ", position: "Co-Convener", img: require("../assets/team/2.jpg") },
-  { id: 3, name: "Ashwani Shankar", position: "Co-Convener", img: require("../assets/team/3.JPG") },
+  { id: 3, name: "Ashwani Shankar", position: "Co-Convener", img: require("../assets/team/3.jpg") },
   { id: 4, name: "Shaswat Pandey", position: "Co-Convener", img: require("../assets/team/4.jpeg") },
   { id: 5, name: "Sarthak Warade", position: "Events Head", img: require("../assets/team/5.JPG") },
   { id: 6, name: "Renu", position: "Head of Marketing", img: require("../assets/team/6.jpeg") },
