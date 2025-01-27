@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBar, CometLanding, HeroSection, PastSpeakers, Partners, TeamGrid } from './Components';
+import { NavBar, CometLanding, HeroSection, PastSpeakers, Partners, TeamGrid,Footer } from './Components';
 import BackgroundImage from "./assets/backgrounds/Background.png";
 
 function App() {
@@ -38,6 +38,9 @@ function App() {
           </section>
           <section id="OurTeam">
             <TeamGrid />
+          </section>
+          <section >
+            <Footer />
           </section>
         </div>
       </main>
