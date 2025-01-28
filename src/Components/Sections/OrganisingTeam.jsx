@@ -1,7 +1,7 @@
 import React from "react";
 import TeamMemberCard from "../Common/TeamMemberCard";
 
-const TeamGrid = () => {
+const OrganisingTeam = () => {
   const teamMembers = [
     { id: 1, name: "Ankit Lal", position: "Convener", img: require("../../assets/team/1.jpg") },
     { id: 2, name: "Chaitanya Gupta ", position: "Co-Convener", img: require("../../assets/team/2.jpg") },
@@ -65,4 +65,4 @@ const TeamGrid = () => {
   );
 };
 
-export default TeamGrid;
+export default OrganisingTeam;

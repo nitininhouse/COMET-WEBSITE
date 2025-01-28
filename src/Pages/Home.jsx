@@ -5,7 +5,7 @@ import {
     Event,
     PastSpeakers,
     Partners,
-    TeamGrid
+    OrganisingTeam
 } from '../Components';
 import BackgroundImage from '../assets/backgrounds/Background.png';
 
@@ -43,7 +43,7 @@ const Home = () => {
                     <Partners />
                 </section>
                 <section id="ourteam">
-                    <TeamGrid />
+                    <OrganisingTeam />
                 </section>
             </div>
         </div>
