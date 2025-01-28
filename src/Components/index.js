@@ -15,3 +15,4 @@ export { default as Event } from "./Sections/Home/Event";
 
 // Sections [Events]
 export { default as HeroSectionEvents } from "./Sections/Events/HeroSection";
+export { default as Main } from "./Sections/Events/Main";

@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroSectionEvents } from "../Components";
+import { HeroSectionEvents, Main } from "../Components";
 import BackgroundImage from "../assets/backgrounds/Background.png";
 
 const EventsPage = () => (
@@ -21,6 +21,7 @@ const EventsPage = () => (
         <div className="relative z-10">
             <section id="home">
                 <HeroSectionEvents />
+                <Main />
             </section>
         </div>
     </div>
