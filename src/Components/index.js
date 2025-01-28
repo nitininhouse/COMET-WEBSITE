@@ -5,12 +5,13 @@ export { default as SpeakerCard } from './Common/SpeakerFrame';
 export { NavBar } from "./Layout/NavBar";
 export { Footer } from "./Layout/Footer";
 
-//Sections
-export { default as HeroSection } from "./Sections/HeroSection";
-export { default as CometLanding } from "./Sections/WhoWeAre";
-export { default as PastSpeakers } from "./Sections/PastSpeakers";
-export { default as Partners } from "./Sections/partners";
-export { default as OrganisingTeam } from "./Sections/OrganisingTeam";
-export { default as Event } from "./Sections/Event";
+//Sections [Home]
+export { default as HeroSection } from "./Sections/Home/HeroSection";
+export { default as CometLanding } from "./Sections/Home/WhoWeAre";
+export { default as PastSpeakers } from "./Sections/Home/PastSpeakers";
+export { default as Partners } from "./Sections/Home/partners";
+export { default as OrganisingTeam } from "./Sections/Home/OrganisingTeam";
+export { default as Event } from "./Sections/Home/Event";
 
-//pages
+// Sections [Events]
+export { default as HeroSectionEvents } from "./Sections/Events/HeroSection";
