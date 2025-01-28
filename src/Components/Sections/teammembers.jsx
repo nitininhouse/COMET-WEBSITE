@@ -1,18 +1,18 @@
 import React from "react";
 
 const teamMembers = [
-  { id: 1, name: "Ankit Lal", position: "Convener", img: require("../assets/team/1.jpeg") },
-  { id: 2, name: "Chaitanya Gupta ", position: "Co-Convener", img: require("../assets/team/2.jpg") },
-  { id: 3, name: "Ashwani Shankar", position: "Co-Convener", img: require("../assets/team/3.JPG") },
-  { id: 4, name: "Shaswat Pandey", position: "Co-Convener", img: require("../assets/team/4.jpeg") },
-  { id: 5, name: "Sarthak Warade", position: "Events Head", img: require("../assets/team/5.JPG") },
-  { id: 6, name: "Renu", position: "Head of Marketing", img: require("../assets/team/6.jpeg") },
-  { id: 7, name: "Smrutisriya Bisoyi", position: "Head of Sponsorship", img: require("../assets/team/7.jpeg") },
-  { id: 8, name: "Mansi Bansal", position: "Head of Outreach", img: require("../assets/team/8.jpeg") },
-  { id: 9, name: "Aarsh Choudhary", position: "General Secretary", img: require("../assets/team/11.png") },
-  { id: 10, name: "Dayal Dewasi ", position: "Office Superintendent", img: require("../assets/team/10.jpg") },
-  { id: 11, name: "Dr. Rajat Rastogi", position: "Professor-In-Charge", img: require("../assets/team/9.jpg") },
-  { id: 12, name: "Gaurav ", position: "Head of Promotions", img: require("../assets/team/IMG_0327.png") },
+  { id: 1, name: "Ankit Lal", position: "Convener", img: require("../../assets/team/1.jpeg") },
+  { id: 2, name: "Chaitanya Gupta ", position: "Co-Convener", img: require("../../assets/team/2.jpg") },
+  { id: 3, name: "Ashwani Shankar", position: "Co-Convener", img: require("../../assets/team/3.jpg") },
+  { id: 4, name: "Shaswat Pandey", position: "Co-Convener", img: require("../../assets/team/4.jpeg") },
+  { id: 5, name: "Sarthak Warade", position: "Events Head", img: require("../../assets/team/5.JPG") },
+  { id: 6, name: "Renu", position: "Head of Marketing", img: require("../../assets/team/6.jpeg") },
+  { id: 7, name: "Smrutisriya Bisoyi", position: "Head of Sponsorship", img: require("../../assets/team/7.jpeg") },
+  { id: 8, name: "Mansi Bansal", position: "Head of Outreach", img: require("../../assets/team/8.jpeg") },
+  { id: 9, name: "Aarsh Choudhary", position: "General Secretary", img: require("../../assets/team/11.png") },
+  { id: 10, name: "Dayal Dewasi ", position: "Office Superintendent", img: require("../../assets/team/10.jpg") },
+  { id: 11, name: "Dr. Rajat Rastogi", position: "Professor-In-Charge", img: require("../../assets/team/9.jpg") },
+  { id: 12, name: "Gaurav ", position: "Head of Promotions", img: require("../../assets/team/IMG_0327.png") },
 ];
 
 const TeamMemberCard = ({ member, showClub = false }) => {

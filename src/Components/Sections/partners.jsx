@@ -2,7 +2,7 @@ import React from "react";
 
 // Dynamically load all images in the partners folder
 const importAll = (r) => r.keys().map(r);
-const logos = importAll(require.context("../assets/partners", false, /\.png$/));
+const logos = importAll(require.context("../../assets/partners", false, /\.png$/));
 
 const Partners = () => {
   // Duplicate logos to create seamless infinite scroll

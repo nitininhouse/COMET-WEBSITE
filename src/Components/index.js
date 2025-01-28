@@ -1,8 +1,16 @@
-export { default as NavBar } from "./NavBar";
-export { default as HeroSection } from "./HeroSection";
-export { default as CometLanding } from "./whoweare";
-export { default as Footer } from "./Footer";
-export { default as PastSpeakers } from "./PastSpeakers";
-export { default as Partners } from "./partners";
-export { default as TeamGrid } from "./teammembers"
-export { default as Event } from "./Event" 
+//commons
+export { default as SpeakerCard } from './Common/SpeakerFrame';
+
+//Layout
+export { default as NavBar } from "./Layout/NavBar";
+export { default as Footer } from "./Layout/Footer";
+
+//Sections
+export { default as HeroSection } from "./Sections/HeroSection";
+export { default as CometLanding } from "./Sections/whoweare";
+export { default as PastSpeakers } from "./Sections/PastSpeakers";
+export { default as Partners } from "./Sections/partners";
+export { default as TeamGrid } from "./Sections/teammembers"
+export { default as Event } from "./Sections/Event"
+
+//pages

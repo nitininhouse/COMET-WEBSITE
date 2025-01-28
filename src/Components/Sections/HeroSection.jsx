@@ -1,6 +1,6 @@
 import React from "react";
-import videoBg from '../assets/backgrounds/videoBg.mp4';
-import { ReactComponent as CometLogo } from '../assets/logos/CometLogo.svg';
+import videoBg from '../../assets/backgrounds/videoBg.mp4';
+import { ReactComponent as CometLogo } from '../../assets/logos/CometLogo.svg';
 
 const HeroSection = () => {
     return (
@@ -21,7 +21,7 @@ const HeroSection = () => {
                         <div className="hidden lg:block flex-shrink-0 mr-8">
                             <CometLogo className="h-32 md:h-48 lg:h-64" />
                         </div>
- 
+
                         <div className="flex flex-col items-center">
                             <div className="text-base xs:text-lg sm:text-2xl md:text-3xl lg:text-4xl font-Ysabeau font-bold text-center whitespace-nowrap">
                                 IIT Roorkee's Annual Career Odyssey

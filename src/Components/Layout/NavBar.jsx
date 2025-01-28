@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { ReactComponent as CDCIITRlogo } from "../assets/logos/CDClogo.svg";
-import { ReactComponent as IITRlogo } from "../assets/logos/IITRlogo.svg";
+import { ReactComponent as CDCIITRlogo } from "../../assets/logos/CDClogo.svg";
+import { ReactComponent as IITRlogo } from "../../assets/logos/IITRlogo.svg";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -46,12 +46,19 @@ const NavBar = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#Home" },
-    { label: "Who we are", href: "#WhoWeAre" },
-    { label: "Past Speakers", href: "#PastSpeakers" },
-    { label: "Our Partners", href: "#OurPartners" },
-    { label: "Our Team", href: "#OurTeam" },
+    { label: "Home", href: "/home" },
+    { label: "Who we are", href: "/whoweare" },
+    { label: "Past Speakers", href: "/pastspeakers" },
+    { label: "Our Partners", href: "/ourpartners" },
+    { label: "Our Team", href: "/ourteam" },
   ];
+
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const handleRegisterRedirect = () => {
     window.location.href = "https://forms.gle/ZzaK5HdrGDHpC7eu8";
@@ -80,14 +87,14 @@ const NavBar = () => {
 
           <div className={`hidden lg:flex items-center space-x-8`}>
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
+                onClick={() => handleScroll(item.href.slice(1))}
                 className={`whitespace-nowrap transition-colors ${activeSection === item.label.replace(/\s+/g, '') ? "text-yellow-400" : "text-white"
                   } hover:text-yellow-400`}
               >
                 {item.label}
-              </a>
+              </button>
             ))}
             <button
               onClick={handleRegisterRedirect}
@@ -132,14 +139,14 @@ const NavBar = () => {
           </div>
           <div className="flex flex-col space-y-4 px-4">
             {navItems.map((item) => (
-              <a
+              <button
                 key={item.label}
-                href={item.href}
-                className="text-yellow-400 hover:text-yellow-300 transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => handleScroll(item.href.slice(1))}
+                className={`whitespace-nowrap transition-colors ${activeSection === item.label.replace(/\s+/g, '') ? "text-yellow-400" : "text-white"
+                  } hover:text-yellow-400`}
               >
                 {item.label}
-              </a>
+              </button>
             ))}
             <button
               onClick={handleRegisterRedirect}

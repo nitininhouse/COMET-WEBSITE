@@ -1,15 +1,15 @@
 import React from "react";
-import { SpeakerCard } from './common';
+import { SpeakerCard } from '../index';
 
-import AnirudhArun from "../assets/speakers/AnirudhArun.png";
-import TanuJain from "../assets/speakers/TanuJain.png";
-import IqlipseNova from "../assets/speakers/IqlipseNova.png";
-import PratishMehta from "../assets/speakers/PratishMehta.png";
-import AbhishekSyal from "../assets/speakers/AbhishekSyal.png";
-import AnkitShukla from "../assets/speakers/AnkitShukla.png";
-import HimanshuShekhar from "../assets/speakers/HimanshuShekhar.png";
-import TarunMalhotra from "../assets/speakers/TarunMalhotra.png";
-import ManojAgarwal from "../assets/speakers/ManojAgarwal.png";
+import AnirudhArun from "../../assets/speakers/AnirudhArun.png";
+import TanuJain from "../../assets/speakers/TanuJain.png";
+import IqlipseNova from "../../assets/speakers/IqlipseNova.png";
+import PratishMehta from "../../assets/speakers/PratishMehta.png";
+import AbhishekSyal from "../../assets/speakers/AbhishekSyal.png";
+import AnkitShukla from "../../assets/speakers/AnkitShukla.png";
+import HimanshuShekhar from "../../assets/speakers/HimanshuShekhar.png";
+import TarunMalhotra from "../../assets/speakers/TarunMalhotra.png";
+import ManojAgarwal from "../../assets/speakers/ManojAgarwal.png";
 
 const PastSpeakers = () => {
     const PAD_X = 10; // X-axis gap in percentage

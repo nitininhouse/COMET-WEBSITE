@@ -1,6 +1,6 @@
 import React from "react";
-import IMAGE1 from "../assets/frames/IMAGE1.png";
-import VIDEO from "../assets/speakers/video.mp4";
+import IMAGE1 from "../../assets/frames/IMAGE1.png";
+import VIDEO from "../../assets/speakers/video.mp4";
 
 export default function CometLanding() {
   return (
