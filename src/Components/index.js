@@ -2,7 +2,7 @@
 export { default as SpeakerCard } from './Common/SpeakerFrame';
 
 //Layout
-export { default as NavBar } from "./Layout/NavBar";
+export { NavBar } from "./Layout/NavBar";
 export { default as Footer } from "./Layout/Footer";
 
 //Sections
