@@ -46,7 +46,7 @@ const Partners = () => {
         .animate-scroll {
           display: flex;
           width: calc(200px * ${duplicatedLogos.length} + 16px * ${duplicatedLogos.length});
-          animation: scroll 14s linear infinite;
+          animation: scroll 35s linear infinite;
         }
       `}</style>
     </div>

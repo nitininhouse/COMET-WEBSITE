@@ -1,8 +1,12 @@
-import React from "react";
-import { HeroSectionEvents, Main } from "../Components";
+import React, { useEffect } from "react";
+import { HeroSectionEvents, Main, DateButton } from "../Components";
 import BackgroundImage from "../assets/backgrounds/Background.png";
 
-const EventsPage = () => (
+const EventsPage = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0);
+    },[])
+    return (
     <div className="relative">
         {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
@@ -21,10 +25,13 @@ const EventsPage = () => (
         <div className="relative z-10">
             <section id="home">
                 <HeroSectionEvents />
+                <DateButton />
                 <Main />
+
             </section>
         </div>
     </div>
-);
+    );
+};
 
 export default EventsPage;

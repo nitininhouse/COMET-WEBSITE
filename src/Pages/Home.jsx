@@ -33,7 +33,7 @@ const Home = () => {
                 <section id="whoweare">
                     <CometLanding />
                 </section>
-                <section>
+                <section  id="events">
                     <Event />
                 </section>
                 <section id="pastspeakers">

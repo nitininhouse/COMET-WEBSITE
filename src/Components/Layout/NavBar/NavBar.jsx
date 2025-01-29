@@ -49,6 +49,7 @@ const NavBar = () => {
     { label: "Past Speakers", href: "#pastspeakers" },
     { label: "Our Partners", href: "#ourpartners" },
     { label: "Our Team", href: "#ourteam" },
+    { label: "Events", href: "#events" }, // Added Events item
   ];
 
   const handleRegisterRedirect = () => {

@@ -18,7 +18,7 @@ const HeroSectionEvents = () => {
             <div className="absolute inset-0 bg-[#E89005] mix-blend-color opacity-100" />
             <div className="absolute inset-0 bg-black mix-blend-multiply opacity-40" />
 
-            <div className="relative z-10 h-full flex items-center justify-center text-white px-2 xs:px-4 sm:px-6 pt-[25vh]">
+            <div className="relative z-10 h-full flex items-center justify-center text-white px-2 xs:px-4 sm:px-6 pt-[25vh] pb-4">
                 <div className="w-full max-w-6xl mx-auto">
                     <div className="flex flex-col items-center justify-center gap-0">
                         <div className="text-[4rem] xs:text-[5rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] font-Aquire font-bold text-transparent bg-clip-text bg-[#E89005] tracking-[10%] leading-none">
@@ -34,7 +34,7 @@ const HeroSectionEvents = () => {
                                 Immerse yourself in COMET'25 with an exciting lineup of competitions, insightful guest lectures by industry leaders, and hands-on workshops designed to ignite your career aspirations and fuel innovation!
                             </span>
                         </div>
-                        <div className="w-full flex justify-center pt-16">
+                        <div className="w-full flex justify-center pt-6+">
                             {/* w-[6rem] h-[2rem] text-xs sm:w-[8rem] sm:h-[3rem] sm:text-base */}
                             <button
                                 onClick={handleRegisterRedirect}

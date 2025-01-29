@@ -4,16 +4,16 @@ import { NavBar, Footer } from './Components';
 import AppRoutes from './Routes/AppRoutes';
 
 function App() {
-  return (
-    <Router>
+  return ( 
+    <Router basename='/comet/'  >
       <div className="App min-h-screen flex flex-col">
         <header>
           <NavBar />
         </header>
         <main className="flex-grow relative">
-          <AppRoutes />
+          <AppRoutes/>
         </main>
-        <footer>
+        <footer> 
           <Footer />
         </footer>
       </div>
