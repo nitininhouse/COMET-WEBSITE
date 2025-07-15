@@ -29,7 +29,7 @@ const OrganisingTeam = () => {
 
         <div className="grid gap-6">
           {/* First Row - Single Larger Member (Team Lead) */}
-          <div className="flex justify-center mb-8 sm:mb-20">
+          <div className="flex justify-center mb-0 sm:mb-6">
             <TeamMemberCard member={teamMembers[0]} />
           </div>
 

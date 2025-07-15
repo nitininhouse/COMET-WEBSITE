@@ -23,7 +23,7 @@ const TeamMemberCard = ({ member, showClub = false }) => {
                         </p>
                         {showClub && (
                             <p className="text-xs sm:text-sm font-bold text-[#E89005] group-hover:text-xs transition-all duration-300">
-                                Carrier Development Cell
+                                Career Development Cell
                             </p>
                         )}
                     </div>

@@ -3,7 +3,7 @@ import videoBg from '../../../assets/backgrounds/videoBgEvents.mp4';
 
 const HeroSectionEvents = () => {
     const handleRegisterRedirect = () => {
-        window.location.href = "https://forms.gle/ZzaK5HdrGDHpC7eu8";
+        window.location.href =  "https://forms.gle/ZzaK5HdrGDHpC7eu8";
     };
 
     return (
@@ -11,7 +11,7 @@ const HeroSectionEvents = () => {
             <video
                 src={videoBg}
                 autoPlay
-                loop
+                loop 
                 muted
                 className="absolute top-0 left-0 w-full h-full object-cover"
             />

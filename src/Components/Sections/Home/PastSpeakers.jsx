@@ -64,7 +64,7 @@ const PastSpeakers = () => {
     ];
 
     return (
-        <section className="min-h-screen py-3 px-4 text-white font-DmSans">
+        <section className=" py-3 px-4 text-white font-DmSans">
             <div className="container mx-auto mb-7">
                 <h1 className="font-Aquire text-3xl sm:text-5xl lg:text-6xl text-center text-[#FFA500] tracking-wider">
                     PAST SPEAKERS

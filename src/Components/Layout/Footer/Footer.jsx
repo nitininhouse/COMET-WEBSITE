@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import IMAGE3 from '../../../assets/logos/comet logo 1.png'
+import Event from '../../Sections/Home/Event';
 
 const CometFooter = () => {
   const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.8868!2d77.8957!3d29.8657!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390eb36bf463f887%3A0x2a4343f728d11b43!2sCDC%20Office%2C%20IIT%20Roorkee!5e0!3m2!1sen!2sin!4v1623456789";
@@ -69,26 +71,14 @@ const CometFooter = () => {
                     </div>
                   </div>
                 </div>
-
-                {/* Connect */}
-               
               </div>
 
               {/* Centered Quick Links */}
               <div className="flex flex-col items-center">
                 <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-                <div className="grid grid-cols-2 gap-x-12 gap-y-2">
-                  <div className="space-y-2">
-                    <a href="#" className="block text-sm hover:text-red-600 transition-colors">IIT Roorkee</a>
-                    <a href="#" className="block text-sm hover:text-red-600 transition-colors">Home</a>
-                    <a href="#" className="block text-sm hover:text-red-600 transition-colors">Who we are</a>
-                  </div>
-                  <div className="space-y-2">
-                    <a href="#" className="block text-sm hover:text-red-600 transition-colors">Events</a>
-                    <a href="#" className="block text-sm hover:text-red-600 transition-colors">Past Speakers</a>
-                    <a href="#" className="block text-sm hover:text-red-600 transition-colors">Our Team</a>
-                  </div>
-                </div>
+                <a href="https://iitr.ac.in/" className="block text-sm hover:text-red-600 transition-colors">IIT Roorkee</a>
+                <Link to="/" className="block text-sm hover:text-red-600 transition-colors">Home</Link>
+                <Link to="/events/" className="block text-sm hover:text-red-600 transition-colors">Events</Link>
               </div>
             </div>
           </div>

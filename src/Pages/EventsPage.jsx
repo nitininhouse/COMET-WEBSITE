@@ -14,7 +14,7 @@ const EventsPage = () => {
                 className="w-full h-full"
                 style={{
                     backgroundImage: `url(${BackgroundImage})`,
-                    backgroundSize: 'auto',
+                    backgroundSize: 'cover',
                     backgroundPosition: 'top center',
                     backgroundRepeat: 'repeat-y',
                 }}

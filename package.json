@@ -1,6 +1,6 @@
 {
   "name": "website-comet",
-  "homepage": "./",
+  "homepage": "/comet",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -23,7 +23,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, navItems, activeSection, handle
                             <span className="block absolute w-8 h-0.5 bg-current transform -rotate-45 top-1/2"></span>
                         </button>
                     </div>
-                    <div className="flex flex-col space-y-4 px-4">
+                    <div className="flex flex-col space-y-4 px-4"> 
                         {navItems.map((item) => (
                             <button
                                 key={item.label}

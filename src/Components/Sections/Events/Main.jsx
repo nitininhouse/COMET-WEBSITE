@@ -16,10 +16,9 @@ const mockInterviews = [
             "✔️ Internship Interview Opportunities with top organizations await!",
             "✔️ Win from a prize pool worth ₹80,000 💰",
             "✔️ Learn, compete, and grow in a thrilling mock trading experience.",
-            "✔️ Showcase your skills to stand out in a competitive field.",
             
         ],
-        image: Progarm2, // Remove the curly braces
+        image: Progarm3, // Remove the curly braces
         link: "https://example.co https://unstop.com/o/UbTqEkW?lb=uMYaY9nS&utm_medium=Share&utm_source=shortUrlm",
     },
     {

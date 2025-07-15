@@ -1,14 +1,13 @@
-// NavBar.js
 import React, { useState, useEffect } from "react";
-import { ReactComponent as CDCIITRlogo } from "../../../assets/logos/CDClogo.svg";
-import { ReactComponent as IITRlogo } from "../../../assets/logos/IITRlogo.svg";
+import CDCIITRlogo from "../../../assets/logos/CDClogo.svg";
+import IITRlogo from "../../../assets/logos/IITRlogo.svg";
 import MobileMenu from "./MobileMenu";
 import NavLinks from "./NavLinks";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
-  const [activeSection, setActiveSection] = useState("Home");
+  const [activeSection, setActiveSection] = useState("Home");  
 
   useEffect(() => {
     const handleResize = () => setIsMobileView(window.innerWidth < 1024);
@@ -43,36 +42,73 @@ const NavBar = () => {
     };
   }, []);
 
+  const handleScroll = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const yOffset = -80; // Adjust this value based on your navbar height
+      const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  };
+
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "Who we are", href: "#whoweare" },
-    { label: "Past Speakers", href: "#pastspeakers" },
-    { label: "Our Partners", href: "#ourpartners" },
-    { label: "Our Team", href: "#ourteam" },
-    { label: "Events", href: "#events" }, // Added Events item
+    { label: "Home", scrollLabel: "home"},
+    { label: "Who we are", scrollLabel: "whoweare"},
+    { label: "Events", scrollLabel: "events" }, 
+    { label: "Past Speakers", scrollLabel: "pastspeakers" },
+    { label: "Our Partners", scrollLabel: "ourpartners" },
+    { label: "Our Team", scrollLabel: "ourteam" },
   ];
 
   const handleRegisterRedirect = () => {
     window.location.href = "https://forms.gle/ZzaK5HdrGDHpC7eu8";
   };
 
+  // Modified NavLinks component inline
+  const NavLinks = ({ navItems, activeSection }) => {
+    return (
+      <>
+        {navItems.map((item) => (
+          <button
+            key={item.scrollLabel}
+            onClick={() => handleScroll(item.scrollLabel)}
+            className={`text-lg hover:text-yellow-400 transition-colors ${
+              activeSection === item.scrollLabel ? "text-yellow-400" : "text-white"
+            }`}
+          >
+            {item.label}
+          </button>
+        ))}
+      </>
+    );
+  };
+
   return (
     <div
-      className={`fixed w-full z-50 ${isMobileView ? "bg-black" : "md:bg-opacity-60 bg-black backdrop-blur-md"
-        } text-white font-DmSans`}
+      className={`fixed w-full z-50 ${
+        isMobileView ? "bg-black" : "md:bg-opacity-60 bg-black backdrop-blur-md"
+      } text-white font-DmSans`}
     >
       <nav className="container mx-auto px-4 py-2">
         <div className="flex items-center justify-between">
-          {/* Logo Section */}
+          {/* Logo Section */} 
           <div className="flex items-center space-x-2 pr-2">
             <a
-              href="https://www.iitr.ac.in"
+              href="https://www.iitr.ac.in"           
               target="_blank"
               rel="noopener noreferrer"
             >
-              <IITRlogo className="h-16 cursor-pointer" />
+              <img 
+                src={IITRlogo}
+                alt="IITR Logo"
+                className="h-16 cursor-pointer"
+              />
             </a>
-            <CDCIITRlogo className="h-16" />
+            <img 
+              src={CDCIITRlogo}
+              alt="CDC IITR Logo"
+              className="h-16"
+            />
             <div className="hidden sm:flex flex-col font-bold">
               <span className="text-lg text-yellow-400">Career Development Cell</span>
               <span className="text-lg text-yellow-400">IIT Roorkee</span>
@@ -99,7 +135,7 @@ const NavBar = () => {
             <span className="block w-6 h-0.5 bg-current mb-1.5"></span>
             <span className="block w-6 h-0.5 bg-current mb-1.5"></span>
             <span className="block w-6 h-0.5 bg-current"></span>
-          </button>
+          </button> 
         </div>
       </nav>
 
@@ -110,6 +146,7 @@ const NavBar = () => {
         navItems={navItems}
         activeSection={activeSection}
         handleRegisterRedirect={handleRegisterRedirect}
+        handleScroll={handleScroll}
       />
     </div>
   );

@@ -23,11 +23,11 @@ const Event = () => {
   ];
 
   const handleNavigation = () => {
-    navigate('/events');
+    navigate('/events/');
   };
 
   return (
-    <div className="min-h-screen p-9" style={{ fontFamily: "Aquire" }}>
+    <div className=" p-9" style={{ fontFamily: "Aquire" }}>
       <h1 className="text-red-600 text-3xl sm:text-5xl md:text-5xl lg:text-6xl  font-bold text-center mb-12">EVENTS</h1>
       
       <div className="flex flex-wrap justify-center gap-8">

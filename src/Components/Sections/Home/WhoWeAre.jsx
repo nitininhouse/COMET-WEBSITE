@@ -5,7 +5,7 @@ import VIDEO from "../../../assets/speakers/video.mp4";
 export default function CometLanding() {
   return (
     <section
-      className="min-h-screen pt-8 text-white font-DM Sans"
+      className=" pt-8 text-white font-DM Sans"
     >
       <div className="container mx-auto space-y-12 mb-12">
         <h1
